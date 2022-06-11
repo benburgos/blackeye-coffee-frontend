@@ -37,7 +37,8 @@ export default function Index(props) {
                     <h1>{drink.name}</h1>
                 </Link>
                 <img src={drink.image} alt={drink.name} />
-                <h3>Title: {drink.title} </h3>
+                <h3> {drink.price} </h3>
+                <h3> {drink.Ingredients} </h3> 
             </div>
         ))
     }

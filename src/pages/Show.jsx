@@ -1,34 +1,31 @@
-import { useState } from "react";
-import { useParams, useNavigate } from "react-router-dom"
+import { useState } from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
 function Show(props) {
   const { id } = useParams();
   const drinks = props.drinks;
   const drink = drinks.find((p) => p._id === id);
   let navigate = useNavigate();
 
-
-
   const [editForm, setEditForm] = useState(drink);
 
   // handleChange function for form
   const handleChange = (event) => {
-    setEditForm(prevState => ({
+    setEditForm((prevState) => ({
       ...prevState,
-      [event.target.name]: event.target.value
+      [event.target.name]: event.target.value,
     }));
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
-  props.updateDrinks(editForm, id);
-    navigate("/");
+    props.updateDrinks(editForm, id);
+    navigate('/');
   };
 
   const removeDrinks = () => {
-   props.deleteDrinks(id);
-    navigate("/");
+    props.deleteDrinks(id);
+    navigate('/');
   };
-  console.log(drink)
 
   return (
     <div className="drink">
