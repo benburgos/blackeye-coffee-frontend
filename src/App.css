@@ -1,34 +1,66 @@
 html {
   text-align: center;
   background-color: #201520;
-  color: #EFE3C8;
+  color: #efe3c8;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
 }
 
 nav {
-color: #FFFFFF;
-position: center;
-
+  color: #ffffff;
+  position: center;
 }
 
 img {
   width: 250px;
-  height:250px;
-  margin: 10px;
-  padding: 15px;
-  display: inline;
+  height: 250px;
 }
-
 
 main {
   display: flex;
-  flex-flow: row wrap;
-  max-width: 500px;
+  flex-direction: column;
 }
 
+.drink-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 25px;
+}
 
 .drink {
-width: 331.1px;
-height: 533px;
-left: 63px;
-top: 201px;
+  width: 330px;
+  height: auto;
+  border: 1px solid white;
+  border-radius: 5%;
+  padding: 5px;
+}
+
+.drink a {
+  text-decoration: none;
+  color: #efe3c8;
+}
+
+.drink a:hover {
+  text-decoration: underline;
+  color: #c94c4c;
+}
+
+/* Show Page Specifics */
+.drink-edit {
+  border: 1px solid white;
+  border-radius: 5%;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  padding-bottom: 15px;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+.drink-edit button {
+  width: fit-content;
 }
