@@ -6,7 +6,7 @@ import Show from "../pages/Show"
 
 function Main(props) {
     const [drinks , setDrinks] = useState(null)
-    const URL = "http://localhost:3003/drinks/"
+    const URL = "https://blackeye-coffee-be.herokuapp.com/"
 
     const getDrinks = async () => {
         const response = await fetch(URL)
