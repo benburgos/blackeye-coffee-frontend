@@ -79,7 +79,9 @@ export default function Index(props) {
                 />
                 <input type="submit" value="Create Drink" />
             </form>
+            <div className="drink-container">
             {props.drinks ? loaded() : loading()}
+            </div>
         </section>
     )
 }
