@@ -5,7 +5,7 @@ export default function Header(props) {
     <nav className="nav">
       <Link to="/">
         <div>
-          <h1>black eye coffee app</h1>
+          <img src="https://i.imgur.com/4n6NYJL.png?1" alt=""/>
         </div>
       </Link>
     </nav>
