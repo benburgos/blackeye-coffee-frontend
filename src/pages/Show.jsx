@@ -28,14 +28,20 @@ function Show(props) {
   };
 
   return (
-    <div className="drink">
+    <div className="drink-edit">
       <h1>{drink.name}</h1>
       <h2>{drink.price}</h2>
       <h2>{drink.Ingredients}</h2>
       <img src={drink.image} alt={drink.name} />
+
+      <br />
+
       <button id="delete" onClick={removeDrinks}>
         DELETE
       </button>
+
+      <br />
+      
       <form onSubmit={handleSubmit}>
         <input
           type="text"

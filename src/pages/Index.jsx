@@ -53,14 +53,14 @@ export default function Index(props) {
                     type="text"
                     value={newForm.name}
                     name="name"
-                    placeholder="name"
+                    placeholder="Name"
                     onChange={handleChange}
                 />
                 <input
                     type="text"
                     value={newForm.image}
                     name="image"
-                    placeholder="image URL"
+                    placeholder="Image URL"
                     onChange={handleChange}
                 />
                 <input
@@ -79,7 +79,9 @@ export default function Index(props) {
                 />
                 <input type="submit" value="Create Drink" />
             </form>
+            <div className="drink-container">
             {props.drinks ? loaded() : loading()}
+            </div>
         </section>
     )
 }

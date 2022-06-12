@@ -1,38 +1,71 @@
-.App {
+html {
   text-align: center;
+  background-color: #201520;
+  color: #efe3c8;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App {
   display: flex;
   flex-direction: column;
-  align-items: center;
+}
+
+nav {
+  color: #ffffff;
+  position: center;
+}
+
+nav img {
+  width: 350px;
+  height: 150px;
+}
+
+img {
+  width: 250px;
+  height: 250px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+.drink-container {
+  display: flex;
+  flex-flow: row wrap;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 10px;
+  margin: 25px;
 }
 
-.App-link {
-  color: #61dafb;
+.drink {
+  width: 330px;
+  height: auto;
+  border: 1px solid white;
+  border-radius: 5%;
+  padding: 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.drink a {
+  text-decoration: none;
+  color: #efe3c8;
+}
+
+.drink a:hover {
+  text-decoration: underline;
+  color: #c94c4c;
+}
+
+/* Show Page Specifics */
+.drink-edit {
+  border: 1px solid white;
+  border-radius: 5%;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  padding-bottom: 15px;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+.drink-edit button {
+  width: fit-content;
 }
