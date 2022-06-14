@@ -3,6 +3,7 @@ import { Link } from "react-router-dom"
 
 export default function Index(props) {
     // state to hold formData
+    
     const [newForm, setNewForm] = useState({
         // clear the form to start aFresh
         name: "",
@@ -39,6 +40,7 @@ export default function Index(props) {
                 <img src={drink.image} alt={drink.name} />
                 <h3> {drink.price} </h3>
                 <h3> {drink.Ingredients} </h3> 
+                <button onClick={() => props.onAdd(drink)}>Add To Cart</button>
             </div>
         ))
     }
