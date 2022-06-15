@@ -8,6 +8,17 @@ export default function Header(props) {
           <img src="https://i.imgur.com/4n6NYJL.png?1" alt=""/>
         </div>
       </Link>
+      <div>
+        <Link to="drinks/cart">
+        Cart{' '}
+          {props.countCartItems ? (
+            <button className="badge">{props.countCartItems}</button>
+          ) : (
+            ''
+          )}
+        </Link>{' '}
+        
+      </div>
     </nav>
   );
 }

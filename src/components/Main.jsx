@@ -1,17 +1,13 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Index from '../pages/Index';
 import Show from '../pages/Show';
+import Basket from './Basket';
 
 function Main(props) {
-  const [drinks, setDrinks] = useState(null);
+ 
   const URL = 'https://blackeye-coffee-be.herokuapp.com/drinks/';
-
-  const getDrinks = async () => {
-    const response = await fetch(URL);
-    const data = await response.json();
-    setDrinks(data);
-  };
+  const { drinks, getDrinks, onAdd, onRemove, cartItems } = props
 
   const createDrinks = async (drink) => {
     // make post request to create drinks
@@ -46,14 +42,16 @@ function Main(props) {
 
   useEffect(() => {
     getDrinks();
-  }, []);
+  }, [drinks]);
 
   return (
     <main>
       <Routes>
         <Route
           path="/"
-          element={<Index drinks={drinks} createDrinks={createDrinks} />}
+          element={<Index drinks={drinks} createDrinks={createDrinks}
+          onAdd={onAdd}
+              onRemove={onRemove} />}
         />
         <Route
           path="/drinks/:id"
@@ -62,6 +60,19 @@ function Main(props) {
               drinks={drinks}
               updateDrinks={updateDrinks}
               deleteDrinks={deleteDrinks}
+              onAdd={onAdd}
+              onRemove={onRemove}
+            />
+          }
+        />
+          <Route
+          path="/drinks/cart"
+          element={
+            <Basket
+              drinks={drinks}
+             cartItems={cartItems}
+              onAdd={onAdd}
+              onRemove={onRemove}
             />
           }
         />

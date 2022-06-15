@@ -73,6 +73,7 @@ function Show(props) {
         />
         <input type="submit" value="Update Drink" />
       </form>
+      <button onClick={() => props.onAdd(drinks)}>Add To Cart</button>
     </div>
   );
 }
