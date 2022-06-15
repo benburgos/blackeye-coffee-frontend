@@ -2,6 +2,10 @@
 
 Our e-commerce website allows users to purchase coffee and snacks. Inspired by the Netherlands, users will be able to add THC to any coffee. We will have a variety of snacks that are also THC friendly.
 
+## Links
+- [Live Site](https://blackeye-coffee.netlify.app/)
+- [Backend Repo](https://github.com/benburgos/blackeye-coffee-backend)
+
 ## Libraries and dependencies:
 
 MongoDB , Express, NodeJS, React, Morgan, CORS, Nodemon, dot.env, CSS, React-Router-Dom, momentjs. 
@@ -26,24 +30,26 @@ MongoDB , Express, NodeJS, React, Morgan, CORS, Nodemon, dot.env, CSS, React-Rou
 - handleCreate
 - handleUpdate
 - handleDelete
+
 #### Other to create
 - handleSave()
 - Const emptyDrink for form
 - Return
 - Header
-<Drinks menu />
+
+`<Drinks menu />`
 State to pass: list of drinks
 Function to pass: handleDelete, handleSave
 
-<Form />
+`<Form />`
 Pass newDrink
 Functions to pass: handleCreate, handleUpdate
 
 Drink Menu component
 Map over props list of drinks
 Return
-<div> for drinks, ( price, ingredients, picture)
-<button/> to remove drink from menu( or order)
+`<div>` for drinks, ( price, ingredients, picture)
+`<button/> `to remove drink from menu( or order)
 onClick=props.handleDelete
 
 Form component
@@ -51,14 +57,22 @@ Form component
 Create handleChange
 Props received: router props, emptyDrink handleCreate, handleUpdate
 Return
-<form />
+`<form />`
 props.handleCreate, props.handleUpdate
-<input /> for Name of drink
+`<input />` for Name of drink
 onChange=handleChange
-<input /> for Ingredients
+`<input />` for Ingredients
 onChange=handleChange
-<input /> for Price
+`<input />` for Price
 onChange=handleChange
-<input /> for Image URL
+`<input />` for Image URL
 onChange=handleChange
-<input /> submit button to add / update drink
+`<input />` submit button to add / update drink
+
+## App Screenshots
+- Main Landing Page
+![Main Page](https://i.imgur.com/oA94Zko.png)
+- Product Page
+![Product Page](https://i.imgur.com/2pieJS5.png)
+- Checkout Page
+![Checkout Page](https://i.imgur.com/fAky56m.png)
