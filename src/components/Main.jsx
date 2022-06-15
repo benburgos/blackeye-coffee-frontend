@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Index from '../pages/Index';
 import Show from '../pages/Show';
@@ -7,7 +7,7 @@ import Basket from './Basket';
 function Main(props) {
  
   const URL = 'https://blackeye-coffee-be.herokuapp.com/drinks/';
-  const { drinks,setDrinks,  getDrinks, onAdd, onRemove, cartItems } = props
+  const { drinks, getDrinks, onAdd, onRemove, cartItems } = props
 
   const createDrinks = async (drink) => {
     // make post request to create drinks
@@ -42,7 +42,7 @@ function Main(props) {
 
   useEffect(() => {
     getDrinks();
-  }, []);
+  }, [drinks]);
 
   return (
     <main>

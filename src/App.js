@@ -1,7 +1,6 @@
 import './App.css';
 import Header from './components/Header';
 import Main from './components/Main';
-import Basket from './components/Basket';
 import { useState, useEffect } from 'react';
 
 function App() {
