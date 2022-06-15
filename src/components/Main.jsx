@@ -5,9 +5,8 @@ import Show from '../pages/Show';
 import Basket from './Basket';
 
 function Main(props) {
- 
   const URL = 'https://blackeye-coffee-be.herokuapp.com/drinks/';
-  const { drinks, getDrinks, onAdd, onRemove, cartItems } = props
+  const { drinks, getDrinks, onAdd, onRemove, cartItems } = props;
 
   const createDrinks = async (drink) => {
     // make post request to create drinks
@@ -49,9 +48,14 @@ function Main(props) {
       <Routes>
         <Route
           path="/"
-          element={<Index drinks={drinks} createDrinks={createDrinks}
-          onAdd={onAdd}
-              onRemove={onRemove} />}
+          element={
+            <Index
+              drinks={drinks}
+              createDrinks={createDrinks}
+              onAdd={onAdd}
+              onRemove={onRemove}
+            />
+          }
         />
         <Route
           path="/drinks/:id"
@@ -65,12 +69,12 @@ function Main(props) {
             />
           }
         />
-          <Route
+        <Route
           path="/drinks/cart"
           element={
             <Basket
               drinks={drinks}
-             cartItems={cartItems}
+              cartItems={cartItems}
               onAdd={onAdd}
               onRemove={onRemove}
             />

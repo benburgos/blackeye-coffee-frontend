@@ -13,32 +13,27 @@ function App() {
     setDrinks(data);
   };
 
-  
-
   useEffect(() => {
     getDrinks();
   }, []);
 
-
   const [cartItems, setCartItems] = useState([]);
 
   const onAdd = (drinks) => {
-   
     const exist = cartItems.find((x) => x._id === drinks._id);
     if (exist) {
       setCartItems(
         cartItems.map((x) =>
           x._id === drinks._id ? { ...exist, qty: exist.qty + 1 } : x
         )
-      )
-    
+      );
     } else {
       setCartItems([...cartItems, { ...drinks, qty: 1 }]);
+    }
   };
-  }
   const onRemove = (drinks) => {
     const exist = cartItems.find((x) => x._id === drinks._id);
-    
+
     if (exist.qty === 1) {
       setCartItems(cartItems.filter((x) => x._id !== drinks._id));
     } else {
@@ -50,14 +45,18 @@ function App() {
     }
   };
 
-
-
   return (
     <div className="App">
-      <Header countCartItems={cartItems.length}/>
-      <Main drinks = {drinks} setDrinks= {setDrinks} getDrinks={getDrinks} onAdd={onAdd}
-          onRemove={onRemove} cartItems={cartItems} setCartItems={setCartItems}/>
-   
+      <Header countCartItems={cartItems.length} />
+      <Main
+        drinks={drinks}
+        setDrinks={setDrinks}
+        getDrinks={getDrinks}
+        onAdd={onAdd}
+        onRemove={onRemove}
+        cartItems={cartItems}
+        setCartItems={setCartItems}
+      />
     </div>
   );
 }
