@@ -5,19 +5,18 @@ export default function Header(props) {
     <nav className="nav">
       <Link to="/">
         <div>
-          <img src="https://i.imgur.com/4n6NYJL.png?1" alt=""/>
+          <img src="https://i.imgur.com/4n6NYJL.png?1" alt="" />
         </div>
       </Link>
-      <div>
+      <div className="cart-link">
         <Link to="drinks/cart">
-        Cart{' '}
+          Cart{' '}
           {props.countCartItems ? (
             <button className="badge">{props.countCartItems}</button>
           ) : (
             ''
           )}
         </Link>{' '}
-        
       </div>
     </nav>
   );
