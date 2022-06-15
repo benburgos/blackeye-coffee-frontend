@@ -45,7 +45,26 @@ export default function Index(props) {
         ))
     }
     const loading = () => {
-        return <h1>Loading...</h1>
+        return (
+            <div id="wrap">
+            <div id="steam" class="steam-one"></div>
+            <div id="steam" class="steam-two"></div>
+            <div id="steam" class="steam-three"></div>
+            <div id="steam" class="steam-four"></div>
+            
+            <div id="cup">
+                <div class ="cup-body">
+                    <div class="cup-shade"></div>
+                    <div class="cup-handle"></div>
+                </div>
+                <div class= "saurce"></div>
+                <div class= "shadow"></div>
+            </div>
+            </div>
+
+            
+        
+        )
     }
 
     return (
