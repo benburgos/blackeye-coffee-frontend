@@ -22,8 +22,8 @@ MongoDB , Express, NodeJS, React, Morgan, CORS, Nodemon, dot.env, CSS, React-Rou
 
 ### Create state
 
-- [list, setList] = useState
-- [favs, setFavs] = useState
+- [drinks, setDrinks] = useState
+- [cartItems, setCartItems] = useState
 - CRUD functions to create
 - Fetch index of drinks (Product), useEffect
 - Pass data to setDrinks state
@@ -42,7 +42,7 @@ State to pass: list of drinks
 Function to pass: handleDelete, handleSave
 
 `<Form />`
-Pass newDrink
+Pass createDrink
 Functions to pass: handleCreate, handleUpdate
 
 Drink Menu component
