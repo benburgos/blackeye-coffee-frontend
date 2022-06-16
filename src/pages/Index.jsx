@@ -45,14 +45,14 @@ export default function Index(props) {
   };
   const loading = () => {
     return (
-      <div class="coffee">
-        <span class="steam"></span>
-        <div class="coffee-bg-lid"></div>
-        <div class="coffee-rim"></div>
-        <div class="coffee-rim-bt"></div>
-        <div class="coffee-color"></div>
-        <div class="coffee-cup"></div>
-        <div class="coffee-shadow"></div>
+      <div className="coffee">
+        <span className="steam"></span>
+        <div className="coffee-bg-lid"></div>
+        <div className="coffee-rim"></div>
+        <div className="coffee-rim-bt"></div>
+        <div className="coffee-color"></div>
+        <div className="coffee-cup"></div>
+        <div className="coffee-shadow"></div>
       </div>
     );
   };
