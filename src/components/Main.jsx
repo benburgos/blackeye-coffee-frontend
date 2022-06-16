@@ -41,7 +41,7 @@ function Main(props) {
 
   useEffect(() => {
     getDrinks();
-  }, [drinks]);
+  }, []);
 
   return (
     <main>
